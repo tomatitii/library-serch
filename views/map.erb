@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang='ja'>
+    <head>
+        <meta charset='utf-8' />
+        <title>HTML</title>
+        <script type='text/javascript' src='iframe.js?var=1.0'></script>
+    </head>
+    <body>
+        <iframe width='800' height='600' frameborder='0' scrolling='no'
+        marginheight='0' marginwidth='0'
+        src='https://www.openstreetmap.org/export/embed.html?bbox=<%= @bbox %>&layer=mapnik&marker=<%= @lat %>%2C<%= @lon %>'
+            style='border: 1px solid black' name='map'></iframe>
+
+        <h2>所属図書館：  <%= @name %></h2>
+        <h2>住所：  <%= @address %></h2>
+        <h2>緯度： <%= @lat %>, 経度： <%= @lon %></h2>
+    </body>
+</html>

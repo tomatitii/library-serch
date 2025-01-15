@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>検索結果</title>
+    </head>
+    <body>
+        <h1>該当図書・雑誌一覧</h1>
+        <% if @titles.empty? || @IDs.empty? %>
+            <p>該当する図書館情報が見つかりませんでした。</p>
+        <% else %>
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>タイトル</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @titles.each_with_index do |title, index| %>
+                  <tr>
+                    <td>
+                      <a href="/result?id=<%= @IDs[index] %>"><%= title %></a>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+        <% end %>
+       <a href="/search">検索画面に戻る</a>
+    </body>
+</html>

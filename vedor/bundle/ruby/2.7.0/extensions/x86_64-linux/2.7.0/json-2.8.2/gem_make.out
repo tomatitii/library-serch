@@ -1,0 +1,21 @@
+current directory: /home/toma/webInt/vedor/bundle/ruby/2.7.0/gems/json-2.8.2/ext/json/ext/parser
+/home/toma/.rbenv/versions/2.7.6/bin/ruby -I /home/toma/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20241122-30449-5hp9se.rb extconf.rb
+checking for rb_enc_interned_str() in ruby.h... no
+checking for rb_hash_new_capa() in ruby.h... no
+checking for rb_gc_mark_locations() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for rb_category_warn() in ruby.h... no
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /home/toma/webInt/vedor/bundle/ruby/2.7.0/gems/json-2.8.2/ext/json/ext/parser
+make "DESTDIR=" clean
+
+current directory: /home/toma/webInt/vedor/bundle/ruby/2.7.0/gems/json-2.8.2/ext/json/ext/parser
+make "DESTDIR="
+compiling parser.c
+linking shared-object json/ext/parser.so
+
+current directory: /home/toma/webInt/vedor/bundle/ruby/2.7.0/gems/json-2.8.2/ext/json/ext/parser
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 parser.so ./.gem.20241122-30449-13bvk1n/json/ext

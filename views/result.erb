@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>検索結果</title>
+    </head>
+    <body>
+       <h1>所蔵図書館一覧</h1>
+        <% if @names.empty? || @addresses.empty? %>
+            <p>該当する図書館情報が見つかりませんでした。</p>
+        <% else %>
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>図書館名</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @names.each_with_index do |name, index| %>
+                  <tr>
+                    <td>
+                      <a href="/map?index=<%= index %>&lat=<%= @coordinates[index][1] %>&lon=<%= @coordinates[index][0] %>"><%= name %></a>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+        <% end %>
+        <a href="/search">検索画面に戻る</a>
+    </body>
+</html>
