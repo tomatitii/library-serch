@@ -6,7 +6,7 @@ require "uri"
 require "cgi"
 
 class YOLP
-  def initialize(app_id= "dj0zaiZpPWxPNFl0STFYSDE0cSZzPWNvbnN1bWVyc2VjcmV0Jng9Njg-")
+  def initialize(app_id= {appID})
     @app_id = app_id
     # Hubenyの式による距離計算用パラメータ
     #rx:長半径（赤道）,ry:短半径（極）
