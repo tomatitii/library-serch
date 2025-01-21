@@ -23,7 +23,7 @@ end
 
 get '/keyword' do
   keyword = params[:keyword]
-  target = "https://ci.nii.ac.jp/books/opensearch/search?title=#{URI.encode(keyword)}&format=json&appid=jsqAbSa3aKX49y0tRjEY"
+  target = "https://ci.nii.ac.jp/books/opensearch/search?title=#{URI.encode(keyword)}&format=json&appid={appID}"
   @titles = []
   @hit_books = []
   URI.open(target) do |f|
